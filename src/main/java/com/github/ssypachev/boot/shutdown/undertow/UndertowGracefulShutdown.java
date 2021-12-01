@@ -12,9 +12,9 @@
  *  limitations under the License.
  */
 
-package com.github.erdanielli.boot.shutdown.undertow;
+package com.github.ssypachev.boot.shutdown.undertow;
 
-import com.github.erdanielli.boot.shutdown.GracefulShutdown;
+import com.github.ssypachev.boot.shutdown.GracefulShutdown;
 import io.undertow.server.HandlerWrapper;
 import io.undertow.server.HttpHandler;
 import io.undertow.server.handlers.GracefulShutdownHandler;

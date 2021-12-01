@@ -48,8 +48,8 @@ for the ancient Spring Boot **1.5**, add
 **AND YOU'RE DONE!**
 
 <sub>... unless you don't enjoy auto-configuration and prefer importing configurations by yourself, 
-import `com.github.erdanielli.boot.shutdown.undertow.UndertowGracefulShutdownConfiguration` **or** 
-`com.github.erdanielli.boot.shutdown.tomcat.TomcatGracefulShutdownConfiguration`</sub>
+import `UndertowGracefulShutdownConfiguration` **or** 
+`TomcatGracefulShutdownConfiguration`</sub>
 
 ### Custom configurations
 
@@ -60,7 +60,7 @@ import `com.github.erdanielli.boot.shutdown.undertow.UndertowGracefulShutdownCon
 server.shutdown-timeout=30s    
 ```
 
-To enable/disable logging, fine-tune the logger `com.github.erdanielli.boot.shutdown.GracefulShutdown`
+To enable/disable logging, fine-tune the logger `GracefulShutdown`
 
 ### Limitations
 

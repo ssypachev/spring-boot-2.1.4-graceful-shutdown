@@ -12,10 +12,10 @@
  *  limitations under the License.
  */
 
-package com.github.erdanielli.boot.shutdown;
+package com.github.ssypachev.boot.shutdown;
 
-import com.github.erdanielli.boot.shutdown.tomcat.TomcatGracefulShutdownConfiguration;
-import com.github.erdanielli.boot.shutdown.undertow.UndertowGracefulShutdownConfiguration;
+import com.github.ssypachev.boot.shutdown.tomcat.TomcatGracefulShutdownConfiguration;
+import com.github.ssypachev.boot.shutdown.undertow.UndertowGracefulShutdownConfiguration;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnWebApplication;
 import org.springframework.context.annotation.Configuration;

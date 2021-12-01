@@ -12,9 +12,9 @@
  *  limitations under the License.
  */
 
-package com.github.erdanielli.boot.shutdown.tomcat;
+package com.github.ssypachev.boot.shutdown.tomcat;
 
-import com.github.erdanielli.boot.shutdown.GracefulShutdown;
+import com.github.ssypachev.boot.shutdown.GracefulShutdown;
 import org.apache.catalina.connector.Connector;
 import org.springframework.boot.web.embedded.tomcat.TomcatConnectorCustomizer;
 import org.springframework.context.event.ContextClosedEvent;

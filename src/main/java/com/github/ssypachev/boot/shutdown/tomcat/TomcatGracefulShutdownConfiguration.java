@@ -12,30 +12,30 @@
  *  limitations under the License.
  */
 
-package com.github.erdanielli.boot.shutdown.undertow;
+package com.github.ssypachev.boot.shutdown.tomcat;
 
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.boot.web.embedded.undertow.UndertowServletWebServerFactory;
+import org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory;
 import org.springframework.boot.web.server.WebServerFactoryCustomizer;
 import org.springframework.context.annotation.Bean;
 
 import java.time.Duration;
 
 /**
- * {@link org.springframework.context.annotation.Configuration Configuration} to enable graceful shutdown for Undertow.
+ * {@link org.springframework.context.annotation.Configuration Configuration} to enable graceful shutdown for Tomcat.
  * <p>The implementation is based on comments from <a href="https://github.com/spring-projects/spring-boot/issues/4657">issue #4657</a></p>
  *
  * @author erdanielli
  */
-public class UndertowGracefulShutdownConfiguration {
+public class TomcatGracefulShutdownConfiguration {
 
     @Bean
-    public UndertowGracefulShutdown gracefulShutdown(@Value("${server.shutdown-timeout:30s}") Duration timeout) {
-        return new UndertowGracefulShutdown(timeout);
+    public TomcatGracefulShutdown gracefulShutdown(@Value("${server.shutdown-timeout:30s}") Duration timeout) {
+        return new TomcatGracefulShutdown(timeout);
     }
 
     @Bean
-    public WebServerFactoryCustomizer<UndertowServletWebServerFactory> undertowCustomizer(UndertowGracefulShutdown handler) {
-        return factory -> factory.addDeploymentInfoCustomizers(info -> info.addInitialHandlerChainWrapper(handler));
+    public WebServerFactoryCustomizer<TomcatServletWebServerFactory> tomcatCustomizer(TomcatGracefulShutdown connector) {
+        return factory -> factory.addConnectorCustomizers(connector);
     }
 }

@@ -12,7 +12,7 @@
  *  limitations under the License.
  */
 
-package com.github.erdanielli.boot.shutdown;
+package com.github.ssypachev.boot.shutdown;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
